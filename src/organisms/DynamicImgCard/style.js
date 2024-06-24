@@ -6,7 +6,7 @@ const DualCardContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #18181b;
+  background-color: ${theme.palette.primary.grayLight};
 `
 
 const DualCardItem = styled.div`
@@ -21,18 +21,20 @@ const DualCardTitle = styled.h3`
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 0.8rem;
-  color: ${theme.palette.primary.grayText};
+  color: ${theme.palette.primary.main};
+  font-weight: 400;
 `
 
 const DualCardSubTitle = styled.h4`
   margin-bottom: 10px;
   font-size: 2.2rem;
-  color: ${theme.palette.primary.grayText};
+  color: ${theme.palette.primary.main};
+  font-weight: bold;
 `
 
 const DualCardText = styled.p`
   margin-bottom: 15px;
-  color: ${theme.palette.primary.white};
+  color: ${theme.palette.primary.main};
 `
 
 const DualCardImage = styled.img`

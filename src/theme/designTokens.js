@@ -12,7 +12,9 @@ const theme = createTheme({
       light: '#E0E0E0',
       white: '#ffffff',
       warningText: '#FFB547',
-      grayLight: '#f1f1f1',
+      grayLight: '#f3f5f9',
+      balckLight: '#18181b',
+      grayText: '#d8d8d8',
     },
     secondary: {
       main: '#ff7f00',
@@ -45,6 +47,7 @@ const theme = createTheme({
     yellow: {
       main: '#FFF1C0',
       warning: '#ED6C02',
+      yellow: '#fedb15',
     },
     purple: {
       light: getRgba('#3f51b5', 0.08),
@@ -60,6 +63,7 @@ const theme = createTheme({
     },
     green: {
       main: '#4CAF50',
+      greenLight: '#86b15b',
     },
     // ...textColors,
     // ...backgroundColors,

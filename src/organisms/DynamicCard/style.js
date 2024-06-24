@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Button as MuiButton } from '@mui/material'
+import theme from '../../theme/designTokens'
 
 const CardContainer = styled.div`
   display: flex;
@@ -41,7 +42,7 @@ const CardText = styled.p`
 
 const Button = styled(MuiButton)`
   &.MuiButton-root {
-    background-color: #86b15b;
+    background-color: ${theme.palette.yellow.yellow};
     color: #fff;
     cursor: pointer;
     text-align: left;

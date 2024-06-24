@@ -10,19 +10,19 @@ const Footer = () => {
         py: 3,
         px: 2,
         mt: 'auto',
-        backgroundColor: theme.palette.gray.main,
+        backgroundColor: theme.palette.primary.balckLight,
         color: theme.palette.primary.light,
       }}
     >
       <Container maxWidth="lg">
         <Typography variant="body1">Lorem Ipsum is simply</Typography>
         <Typography variant="body2" color="text.secondary" align="center">
-          {'© '}
+          {/* {'© '} */}
           <Link color="#fff" href="https://meusite.com/">
             Site desenvolvido por Arthur Bonilha
           </Link>{' '}
-          {new Date().getFullYear()}
-          {'.'}
+          {/* {new Date().getFullYear()}
+          {'.'} */}
         </Typography>
       </Container>
     </Box>

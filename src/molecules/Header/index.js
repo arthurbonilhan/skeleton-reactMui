@@ -16,7 +16,8 @@ const Header = () => {
     >
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <Typography variant="h6" component="div">
-          <img src="https://dedetizadoradetect.com.br/img/logo.png" alt="Logo" style={{ height: '50px' }} />
+          {/* <img src="https://dedetizadoradetect.com.br/img/logo.png" alt="Logo" style={{ height: '50px' }} /> */}
+          SKELETON
         </Typography>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           {!isMobile ? (
@@ -25,13 +26,10 @@ const Header = () => {
                 Home
               </Button>
               <Button variant="text" color="inherit" sx={{ marginRight: 1 }}>
-                Sobre Nós
-              </Button>
-              <Button variant="text" color="inherit" sx={{ marginRight: 1 }}>
                 Serviços
               </Button>
-              <Button variant="text" color="inherit">
-                Orçamentos
+              <Button variant="contained" color="success">
+                Contato
               </Button>
             </>
           ) : (
