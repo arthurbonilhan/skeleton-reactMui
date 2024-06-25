@@ -6,6 +6,10 @@ const Container = styled.div`
   text-align: center;
   padding: 6rem;
   background-color: ${theme.palette.primary.white};
+
+  @media only screen and (max-width: 600px) {
+    padding: 1rem;
+  }
 `
 
 const BoxText = styled.div`
@@ -27,11 +31,22 @@ const Aside = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 200px;
+
+  @media only screen and (max-width: 600px) {
+    display: block;
+    text-align: center;
+  }
 `
 
 const Section = styled.div`
   width: 50%;
   text-align: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    text-align: center;
+    padding-top: 1.5rem;
+  }
 `
 
 const SectionTitle = styled.h2`

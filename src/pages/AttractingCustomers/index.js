@@ -1,9 +1,9 @@
 import { Grid } from '@mui/material'
 import DynamicImgCard from '../../organisms/DynamicImgCard'
-import * as Styled from './style'
 import HalfTextHalfImageSection from '../../organisms/HalfTextHalfImageSection'
 import DynamicSection from '../../organisms/DynamicSection'
 import Form from './Form'
+import * as Styled from './style'
 
 const AttractingCustomers = () => {
   return (

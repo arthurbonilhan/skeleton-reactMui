@@ -1,11 +1,11 @@
-import Carousel from '../../organisms/Carousel'
-import DynamicCard from '../../organisms/DynamicCard'
 import { ArrowForward } from '@mui/icons-material'
 import { Grid } from '@mui/material'
-import * as Styled from './style'
 import DynamicDualCard from '../../organisms/DynamicDualCard'
 import DynamicImgCard from '../../organisms/DynamicImgCard'
+import Carousel from '../../organisms/Carousel'
+import DynamicCard from '../../organisms/DynamicCard'
 import { cardData, images } from './utils'
+import * as Styled from './style'
 
 const Home = () => {
   return (

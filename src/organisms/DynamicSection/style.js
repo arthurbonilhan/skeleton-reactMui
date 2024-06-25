@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button as MuiButton, Grid as MuiGrid } from '@mui/material'
+import { Button as MuiButton, Grid as MuiGrid, Box as MuiBox } from '@mui/material'
 import theme from '../../theme/designTokens'
 
 const Button = styled(MuiButton)`
@@ -37,4 +37,12 @@ const Section = styled.div`
   align-items: flex-start;
 `
 
-export { Button, CardTitle, CardText, Section, Grid }
+const Box = styled(MuiBox)`
+  &.MuiBox-root {
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+`
+
+export { Button, CardTitle, CardText, Section, Grid, Box }

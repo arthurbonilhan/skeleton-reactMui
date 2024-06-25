@@ -1,12 +1,12 @@
-import React from 'react'
-import { AppBar, Toolbar, Typography, Button, useMediaQuery, useTheme } from '@mui/material'
+import { Toolbar, Typography, Button, useMediaQuery, useTheme } from '@mui/material'
+import * as Styled from './style'
 
 const Header = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
-    <AppBar
+    <Styled.AppBar
       position="fixed"
       sx={{
         backgroundColor: 'transparent',
@@ -39,7 +39,7 @@ const Header = () => {
           )}
         </div>
       </Toolbar>
-    </AppBar>
+    </Styled.AppBar>
   )
 }
 
