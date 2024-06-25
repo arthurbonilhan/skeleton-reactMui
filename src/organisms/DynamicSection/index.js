@@ -30,7 +30,7 @@ const DynamicSection = ({ imageUrl, imagePosition, children }) => {
             alt="Descrição da imagem"
             sx={{
               width: '100%',
-              height: '600px',
+              height: '700px',
               objectFit: 'cover',
             }}
           />
