@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box } from '@mui/material'
+import { Grid } from '@mui/material'
 import { ArrowForward } from '@mui/icons-material'
 import * as Styled from './style'
 
@@ -26,7 +26,7 @@ const HalfTextHalfImageSection = ({ title, text, textButton, imageUrl }) => {
         </Styled.Section>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Box
+        <Styled.Box
           component="img"
           src={imageUrl}
           alt="Descrição da imagem"

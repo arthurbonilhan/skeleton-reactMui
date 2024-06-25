@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button as MuiButton, Grid as MuiGrid } from '@mui/material'
+import { Button as MuiButton, Grid as MuiGrid, Box as MuiBox } from '@mui/material'
 import theme from '../../theme/designTokens'
 
 const Button = styled(MuiButton)`
@@ -14,6 +14,14 @@ const Button = styled(MuiButton)`
 const Grid = styled(MuiGrid)`
   &.MuiGrid-root {
     background-color: ${theme.palette.gray.dark};
+  }
+`
+
+const Box = styled(MuiBox)`
+  &.MuiBox-root {
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
   }
 `
 
@@ -35,6 +43,11 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media only screen and (max-width: 600px) {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
 `
 
-export { Button, CardTitle, CardText, Section, Grid }
+export { Button, CardTitle, CardText, Section, Grid, Box }

@@ -1,6 +1,6 @@
-import React from 'react'
 import { Box, Container, Typography, Link } from '@mui/material'
 import theme from '../../theme/designTokens'
+import * as Styled from './style'
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
         color: theme.palette.primary.light,
       }}
     >
-      <Container maxWidth="lg">
+      <Styled.Container maxWidth="lg">
         <Typography variant="body1">Lorem Ipsum is simply</Typography>
         <Typography variant="body2" color="text.secondary" align="center">
           {/* {'© '} */}
@@ -24,7 +24,7 @@ const Footer = () => {
           {/* {new Date().getFullYear()}
           {'.'} */}
         </Typography>
-      </Container>
+      </Styled.Container>
     </Box>
   )
 }

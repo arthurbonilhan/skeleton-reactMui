@@ -1,12 +1,13 @@
 import React from 'react'
-import { Grid, Box } from '@mui/material'
+import { Grid } from '@mui/material'
+import * as Styled from './style'
 
 const DynamicSection = ({ imageUrl, imagePosition, children }) => {
   return (
     <Grid container>
       {imagePosition === 'left' && (
         <Grid item xs={12} md={6}>
-          <Box
+          <Styled.Box
             component="img"
             src={imageUrl}
             alt="Descrição da imagem"
@@ -23,7 +24,7 @@ const DynamicSection = ({ imageUrl, imagePosition, children }) => {
       </Grid>
       {imagePosition === 'right' && (
         <Grid item xs={12} md={6}>
-          <Box
+          <Styled.Box
             component="img"
             src={imageUrl}
             alt="Descrição da imagem"

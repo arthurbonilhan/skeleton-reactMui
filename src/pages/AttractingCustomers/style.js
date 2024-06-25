@@ -29,11 +29,20 @@ const Aside = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 20rem;
+
+  @media only screen and (max-width: 600px) {
+    height: 100%;
+  }
 `
 
 const AsideSection = styled.div`
   width: 50%;
   text-align: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    padding: 2rem;
+  }
 `
 
 const AsideText = styled.p`

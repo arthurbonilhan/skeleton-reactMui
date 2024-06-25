@@ -12,9 +12,19 @@ const DualCardContainer = styled.div`
 const DualCardItem = styled.div`
   padding: 3rem;
   width: 50%;
+
+  @media only screen and (max-width: 600px) {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
 `
 const DualCardItemImage = styled.div`
   padding: 3rem;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `
 
 const DualCardTitle = styled.h3`

@@ -5,6 +5,10 @@ const CarouselContainer = styled.div`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   overflow: hidden;
+
+  @media only screen and (max-width: 600px) {
+    height: 100%;
+  }
 `
 
 const CarouselInner = styled.div`
@@ -32,6 +36,10 @@ const DotsContainer = styled.div`
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `
 
 const Dot = styled.div`
