@@ -1,12 +1,21 @@
 import React, { useState } from 'react'
-import { TextField, Button, Grid, Box, Typography, Container } from '@mui/material'
+import { TextField, Button, Grid, Box, Typography, Container, Snackbar, Alert } from '@mui/material'
+import { confirmRegister } from './services'
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    tipoServico: '',
+    nome: '',
+    telefone: '',
     email: '',
-    password: '',
+    cidade: '',
+    quantidadeMetros: '',
   })
+
+  const [errors, setErrors] = useState({})
+  const [openSuccess, setOpenSuccess] = useState(false)
+  const [openError, setOpenError] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -16,10 +25,17 @@ const Form = () => {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Aqui você pode adicionar a lógica para lidar com os dados do formulário, como enviar para um servidor
-    console.log('Form Data:', formData)
+    await confirmRegister({ formData, setOpenSuccess, setErrors, setFormData, setErrorMessage, setOpenError })
+  }
+
+  const handleCloseSuccess = () => {
+    setOpenSuccess(false)
+  }
+
+  const handleCloseError = () => {
+    setOpenError(false)
   }
 
   return (
@@ -41,12 +57,42 @@ const Form = () => {
               <TextField
                 required
                 fullWidth
-                id="name"
-                label="Nome"
-                name="name"
-                autoComplete="name"
-                value={formData.name}
+                id="tipoServico"
+                label="Tipo de Serviço"
+                name="tipoServico"
+                autoComplete="tipoServico"
+                value={formData.tipoServico}
                 onChange={handleChange}
+                error={!!errors.tipoServico}
+                helperText={errors.tipoServico}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="nome"
+                label="Nome"
+                name="nome"
+                autoComplete="nome"
+                value={formData.nome}
+                onChange={handleChange}
+                error={!!errors.nome}
+                helperText={errors.nome}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="telefone"
+                label="Telefone"
+                name="telefone"
+                autoComplete="telefone"
+                value={formData.telefone}
+                onChange={handleChange}
+                error={!!errors.telefone}
+                helperText={errors.telefone}
               />
             </Grid>
             <Grid item xs={12}>
@@ -59,19 +105,36 @@ const Form = () => {
                 autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
+                error={!!errors.email}
+                helperText={errors.email}
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
                 required
                 fullWidth
-                name="password"
-                label="Senha"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-                value={formData.password}
+                id="cidade"
+                label="Cidade"
+                name="cidade"
+                autoComplete="cidade"
+                value={formData.cidade}
                 onChange={handleChange}
+                error={!!errors.cidade}
+                helperText={errors.cidade}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="quantidadeMetros"
+                label="Quantidade de Metros"
+                name="quantidadeMetros"
+                autoComplete="quantidadeMetros"
+                value={formData.quantidadeMetros}
+                onChange={handleChange}
+                error={!!errors.quantidadeMetros}
+                helperText={errors.quantidadeMetros}
               />
             </Grid>
           </Grid>
@@ -80,6 +143,17 @@ const Form = () => {
           </Button>
         </Box>
       </Box>
+
+      <Snackbar open={openSuccess} autoHideDuration={6000} onClose={handleCloseSuccess}>
+        <Alert onClose={handleCloseSuccess} severity="success" sx={{ width: '100%' }}>
+          Dados enviados com sucesso!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={openError} autoHideDuration={6000} onClose={handleCloseError}>
+        <Alert onClose={handleCloseError} severity="error" sx={{ width: '100%' }}>
+          {errorMessage}
+        </Alert>
+      </Snackbar>
     </Container>
   )
 }
