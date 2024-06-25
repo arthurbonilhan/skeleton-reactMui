@@ -1,1 +1,1 @@
-// export * from './addTrilhas'
+export * from './captacao'
