@@ -1,4 +1,3 @@
-import React from 'react'
 import Carousel from '../../organisms/Carousel'
 import DynamicCard from '../../organisms/DynamicCard'
 import { ArrowForward } from '@mui/icons-material'

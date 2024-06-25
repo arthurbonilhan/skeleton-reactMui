@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from '../pages/Home'
+import { AttractingCustomers, Home } from '../pages'
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/landing-page" element={<LandingPage />} /> */}
+        <Route path="/captacao" element={<AttractingCustomers />} />
       </Routes>
     </BrowserRouter>
   )
