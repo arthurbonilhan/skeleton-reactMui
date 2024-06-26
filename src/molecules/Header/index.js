@@ -1,4 +1,5 @@
 import { Toolbar, Typography, Button, useMediaQuery, useTheme } from '@mui/material'
+import { Link } from 'react-router-dom'
 import * as Styled from './style'
 
 const Header = () => {
@@ -22,11 +23,11 @@ const Header = () => {
         <div style={{ display: 'flex', alignItems: 'center' }}>
           {!isMobile ? (
             <>
-              <Button variant="text" color="inherit" sx={{ marginRight: 1 }}>
+              <Button variant="text" color="inherit" sx={{ marginRight: 1 }} component={Link} to="/">
                 Home
               </Button>
-              <Button variant="text" color="inherit" sx={{ marginRight: 1 }}>
-                Serviços
+              <Button variant="text" color="inherit" sx={{ marginRight: 1 }} component={Link} to="/sobre">
+                Sobre
               </Button>
               <Button variant="contained" color="success">
                 Contato

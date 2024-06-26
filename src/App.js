@@ -1,3 +1,4 @@
+// App.js
 import React from 'react'
 import AppRouter from './routes/AppRouter'
 import Header from './molecules/Header'
@@ -18,4 +19,5 @@ const App = () => {
     </>
   )
 }
+
 export default App

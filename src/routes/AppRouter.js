@@ -1,15 +1,15 @@
+// AppRouter.js
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { AttractingCustomers, Home } from '../pages'
+import { Routes, Route } from 'react-router-dom'
+import { AttractingCustomers, Home, AboutUs } from '../pages'
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/captacao" element={<AttractingCustomers />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/captacao" element={<AttractingCustomers />} />
+      <Route path="/sobre" element={<AboutUs />} />
+    </Routes>
   )
 }
 
